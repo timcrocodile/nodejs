@@ -3,9 +3,9 @@ const http = require("http");
 
 const server = http.createServer((req, res) => {
   // res.end("home");
-  if (req.url === "/pagina1") res.end("hello world");
-  else if (req.url === "/pagina2") res.end("pagina2");
-  else if (req.url === "/pagina3") res.end("pagina3");
+  if (req.url === "/") res.end("hello world");
+  else if (req.url === "/ospite") res.end("hello visitor");
+  else if (req.url === "/ciao") res.end("hello");
   //404
   else {
     res.writeHead(404);
@@ -13,4 +13,4 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(8000);
+server.listen(3000);
